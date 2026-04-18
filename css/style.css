@@ -1,1 +1,351 @@
+/* google font import */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
+/* color variables */
+:root {
+    --primary-gold: #c78c06;
+    --light-gold: #ffe6ac;
+    --dark-gray: #222;
+    --white: white;
+    --max-width: 1200px;
+}
+
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* global styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* button styles */
+.btn-gold, .btn-dark {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-gold {
+    background-color: var(--primary-gold);
+    color: var(--white);
+}
+
+.btn-dark {
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+
+/* mobile first header styles */
+.page-header {
+    background-color: var(--dark-gray);
+    padding: 0 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.brand-box {
+    background-color: var(--primary-gold);
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.brand-box img {
+    height: 50px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.nav-list a {
+    color: var(--primary-gold);
+}
+
+.search-bar {
+    display: flex;
+    width: 100%;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--primary-gold);
+}
+
+.search-bar button {
+    background-color: var(--primary-gold);
+    padding: 8px 15px;
+    border: none;
+}
+
+/* hero section styles */
+.hero-section {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/main-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 5px;
+}
+
+/* about section styles */
+.about-section {
+    padding: 0;
+}
+
+.about-split {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-image img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    background-color: var(--light-gold);
+    padding: 40px 20px;
+}
+
+/* services section grid */
+.services-section {
+    padding: 40px 20px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: var(--light-gold);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-item img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.item-text {
+    padding: 20px;
+}
+
+/* vision section styles */
+.vision-section {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/images/vision.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* team section styles */
+.team-section {
+    padding: 40px 20px;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.team-figure {
+    background-color: var(--light-gold);
+}
+
+.team-figure img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.team-caption {
+    padding: 20px;
+}
+
+/* contact section styles */
+.contact-section {
+    padding: 40px 20px;
+}
+
+.contact-top {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-row {
+    margin-bottom: 15px;
+}
+
+.input-row label {
+    display: block;
+}
+
+.input-row input, .input-row textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--primary-gold);
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.hours-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.hours-wrapper th, .hours-wrapper td {
+    border: 1px solid var(--primary-gold);
+    padding: 10px;
+    text-align: left;
+}
+
+/* footer styles */
+.page-footer {
+    background-color: var(--dark-gray);
+    color: var(--primary-gold);
+    padding: 20px;
+    text-align: center;
+}
+
+/* desktop styles 760px and above */
+@media (min-width: 760px) {
+    .page-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 40px;
+        align-items: center;
+    }
+
+    .brand-box {
+        width: auto;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .search-bar {
+        width: auto;
+    }
+
+    .about-section, .services-section, .team-section, .contact-section {
+        max-width: var(--max-width);
+        margin: 0 auto;
+    }
+
+    .hero-section, .vision-section {
+        width: 100%;
+    }
+
+    .hero-overlay, .vision-inner {
+        max-width: var(--max-width);
+        margin: 0 auto;
+    }
+
+    .about-split {
+        flex-direction: row;
+    }
+
+    .about-image img {
+        height: 100%;
+    }
+
+    .services-list {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .item-wide {
+        grid-column: span 3;
+    }
+
+    .item-narrow {
+        grid-column: span 2;
+    }
+
+    .team-figure {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .team-figure img {
+        width: 50%;
+        height: auto;
+        min-height: 400px;
+    }
+
+    .img-right {
+        flex-direction: row-reverse;
+    }
+
+    .contact-top {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .form-wrapper, .map-wrapper {
+        flex: 1;
+        min-width: 45%;
+    }
+
+    .hours-wrapper {
+        flex: 0 0 100%;
+        margin-top: 40px;
+    }
+}
